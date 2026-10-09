@@ -114,11 +114,11 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["39.107.72.122"];
-pub const RS_PUB_KEY: &str = "9HwSvEIZgqHYmFHngGFzH5ivBIfxaI0Okv+EJmvkNGg=";
+pub const RENDEZVOUS_SERVERS: &[&str] = &["111.231.33.159"];
+pub const RS_PUB_KEY: &str = "kqlERCdph7szPfaRBjlzIuNBsRQNDkW538mHbyqjrbw=";
 
 /// 自建中继服务器。非空时客户端强制使用它，忽略信令服务器下发的地址。
-pub const RELAY_SERVERS: &[&str] = &["39.107.72.122"];
+pub const RELAY_SERVERS: &[&str] = &["111.231.33.159"];
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;

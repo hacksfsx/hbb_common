@@ -255,7 +255,11 @@ where
 }
 
 pub fn is_valid_custom_id(id: &str) -> bool {
-    regex::Regex::new(r"^[a-zA-Z][\w-]{5,15}$")
+    // [custom] A digit is allowed as the first character, so a purely numeric
+    // custom id (e.g. "40517511") is accepted. Upstream demands a leading letter,
+    // which forces whoever wants a numeric id to pad it with a letter - and that
+    // padding also changes the id's length (8 digits -> 9 characters).
+    regex::Regex::new(r"^[a-zA-Z0-9][\w-]{5,15}$")
         .unwrap()
         .is_match(id)
 }
